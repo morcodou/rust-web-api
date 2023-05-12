@@ -19,14 +19,14 @@ impl RustaceanRepository {
     //         .get_result(connection)
     // }
 
-    // pub fn create(
-    //     connection: &mut PgConnection,
-    //     new_rustacean: NewRustacean,
-    // ) -> QueryResult<Rustacean> {
-    //     diesel::insert_into(rustaceans::table)
-    //         .values(new_rustacean)
-    //         .get_result(connection)
-    // }
+    pub fn create(
+        connection: &mut PgConnection,
+        new_rustacean: NewRustacean,
+    ) -> QueryResult<Rustacean> {
+        diesel::insert_into(rustaceans::table)
+            .values(new_rustacean)
+            .get_result(connection)
+    }
 
     // pub fn save(
     //     connection: &mut PgConnection,
